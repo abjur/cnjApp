@@ -1,1 +1,3 @@
-# cnjApp
+## Shiny cnjApp
+
+Para testar litigiosidade e desenvolvimento
