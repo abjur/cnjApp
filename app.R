@@ -3,6 +3,8 @@ library(shinydashboard)
 library(magrittr)
 library(ggplot2)
 library(shiny)
+library(Cairo)
+options(shiny.usecairo = TRUE)
 # library(sf)
 # Import -----------------------------------------------------------------------
 
@@ -142,7 +144,7 @@ server <- function(input, output, session) {
     
     corr <- df_disp() %>% 
       dplyr::summarise(corr = cor(!!sym(input$x), !!sym(input$y)),
-                       corr = scales::percent(corr))
+                       corr = round(corr, 2))
 
     p <- df_disp() %>% 
       ggplot(aes(x = !!sym(input$x), 
