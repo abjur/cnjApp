@@ -2,6 +2,7 @@
 library(shinydashboard)
 library(magrittr)
 library(ggplot2)
+library(shiny)
 # library(sf)
 # Import -----------------------------------------------------------------------
 
@@ -63,7 +64,7 @@ pnud_choices <- c("IDH" = "idhm",
 
 # UI ----------------------------------------------------------------------
 ui <- dashboardPage(
-  header = dashboardHeader(title = tags$a(tags$img(src = "abj.png"),
+  header = dashboardHeader(title = tags$a(tags$img(src = "https://abj.org.br/assets/logo-home.png", height='100%'),
                                           href = "https://abj.org.br",
                                           target = "_blank")),
   skin = "black",
@@ -167,5 +168,5 @@ server <- function(input, output, session) {
   })
 }
 
-shinyApp(ui = ui, server = server)
+shiny::shinyApp(ui = ui, server = server)
 
