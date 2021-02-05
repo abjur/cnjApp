@@ -1,3 +1,5 @@
 ## Shiny cnjApp
 
-Para testar litigiosidade e desenvolvimento
+Aplicativo para testar litigiosidade e desenvolvimento
+
+![](grafico.png)
